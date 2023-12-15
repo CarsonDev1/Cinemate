@@ -1,18 +1,11 @@
-import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo.png';
 
 const Header = () => {
 	return (
-		<div className='flex justify-between'>
-			<div className='flex items-center gap-10 text-[#808191] text-base font-bold'>
-				<Link to=''>
-					<span className='hover:text-[#F43D71]'>TV Series</span>
-				</Link>
-				<Link to=''>
-					<span className='hover:text-[#F43D71]'>Movies</span>
-				</Link>
-				<Link to=''>
-					<span className='hover:text-[#F43D71]'>Anime</span>
-				</Link>
+		<div className='flex items-center justify-between'>
+			<div className='flex items-center'>
+				<img src={Logo} alt='' className='w-32' />
+				<h3 className='text-base text-[#ffff]'>Cinemate</h3>
 			</div>
 			<div className='flex-[0_1_255px] '>
 				<Search />
@@ -38,7 +31,7 @@ function Search() {
 			<input
 				type='text'
 				placeholder='Quick search . . .'
-				className='w-full text-xs font-normal bg-transparent outline-none'
+				className='w-full text-xs font-normal bg-transparent outline-none text-[#ffffff]'
 			/>
 		</div>
 	);
@@ -54,7 +47,7 @@ function User() {
 					className='w-10 h-10 rounded-full'
 				/>
 				<div className='flex flex-col items-center'>
-					<span className='text-sm font-semibold text-[#11142D]'>Van Tuyet To</span>
+					<span className='text-sm font-semibold text-[#d6d9f0]'>Van Tuyet To</span>
 					<span className='text-sm font-normal text-[#808191]'>Admin</span>
 				</div>
 			</div>
