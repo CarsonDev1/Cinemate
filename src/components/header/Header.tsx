@@ -1,13 +1,7 @@
-import Logo from '../../assets/logo.png';
-
 const Header = () => {
 	return (
-		<div className='flex items-center justify-between'>
-			<div className='flex items-center'>
-				<img src={Logo} alt='' className='w-32' />
-				<h3 className='text-base text-[#ffff]'>Cinemate</h3>
-			</div>
-			<div className='flex-[0_1_255px] '>
+		<div className='flex items-center justify-between pl-2 pr-2'>
+			<div className='flex-[0_1_355px] '>
 				<Search />
 			</div>
 			<div>

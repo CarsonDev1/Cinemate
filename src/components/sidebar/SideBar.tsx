@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { TSidebar } from '../../types/sidebar.types';
 import React, { useEffect, useState } from 'react';
+import Logo from '../../assets/logo.png';
 
 export const SidebarItems: TSidebar[] = [
 	{
@@ -175,11 +176,23 @@ const SideBar: React.FC = () => {
 
 	return (
 		<div className='w-[20%] flex flex-col px-4 pt-[25px] pb-4 gap-1 bg-[#141414]'>
+			<div className='flex items-center'>
+				<img src={Logo} alt='' className='w-32' />
+				<h3 className='text-xl font-bold animate-pulse'>
+					<span className='text-[#ff0000] animate-pulse'>M</span>
+					<span className='text-[#00ff00] animate-pulse'>A</span>
+					<span className='text-[#0000ff] animate-pulse'>Y</span>
+					<span className='text-[#ffff00] animate-pulse'>C</span>
+					<span className='text-[#ff00ff] animate-pulse'>I</span>
+					<span className='text-[#00ffff] animate-pulse'>N</span>
+					<span className='text-[#ffffff] animate-pulse'>E</span>
+				</h3>
+			</div>
 			{SidebarItems.map((item) => (
 				<Link
 					to={item.path}
 					key={item.title}
-					className='flex items-center px-6 py-4 text-base font-bold gap-[10px] text-[#e3e3eb] rounded-lg hover:text-[#a5114a]'
+					className='flex items-center px-6 py-4 text-base font-bold gap-[10px] text-[#e3e3eb] rounded-lg hover:text-[#F43D71]'
 					onClick={() => handleLinkClick(item.path)}
 				>
 					<span>{item.icon}</span>
